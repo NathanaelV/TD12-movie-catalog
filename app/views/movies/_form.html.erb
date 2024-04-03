@@ -1,0 +1,24 @@
+<%= form_with model: movie do |form| %>
+    <%= form.label :title, 'Título:' %>
+    <%= form.text_field :title %><br>
+
+    <%= form.label :release_date, 'Data de lançamento:' %>
+    <%= form.date_field :release_date %><br>
+
+    <%= form.label :running_time, 'Tempo de duração:' %>
+    <%= form.number_field :running_time %><br>
+
+    <%= form.label :story_line, 'Sinopse:' %>
+    <%= form.text_area :story_line %><br>
+
+    <%= form.label :country_origin, 'País de origem:' %>
+    <%= form.text_field :country_origin %><br>
+
+    <%= form.label :director_id, 'Diretor:' %>
+    <%= form.collection_select :director_id, Director.order(:name), :id, :name %><br>
+    
+    <%= form.label :genre_id, 'Gênero:' %>
+    <%= form.collection_select :genre_id, Genre.order(:name), :id, :name %><br>
+
+    <%= form.submit 'Salvar' %>
+<% end %>

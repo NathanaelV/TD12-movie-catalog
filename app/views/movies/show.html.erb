@@ -1,5 +1,7 @@
 <h1><%= @movie.title %></h1>
 
+<%# link_to 'Editar', edit_movie_path %>
+
 <dl>
     <dt><strong>Nome: </strong>
     <dd><%= @movie.title %>
@@ -22,3 +24,5 @@
     <dt><strong>Gênero: </strong>
     <dd><%= @movie.genre.name if @movie.genre %>
 </dl>
+
+<%= link_to 'Menu', root_path %>
