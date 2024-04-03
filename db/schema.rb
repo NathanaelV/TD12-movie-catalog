@@ -10,38 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_04_03_134619) do
-  create_table "directors", force: :cascade do |t|
-    t.string "name"
-    t.date "birthdate"
-    t.string "nationality"
-    t.integer "genre_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["genre_id"], name: "index_directors_on_genre_id"
+ActiveRecord::Schema[7.1].define(version: 20_240_403_134_619) do
+  create_table 'directors', force: :cascade do |t|
+    t.string 'name'
+    t.date 'birthdate'
+    t.string 'nationality'
+    t.integer 'genre_id', null: false
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['genre_id'], name: 'index_directors_on_genre_id'
   end
 
-  create_table "genres", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'genres', force: :cascade do |t|
+    t.string 'name'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "movies", force: :cascade do |t|
-    t.text "story_line"
-    t.date "release_date"
-    t.string "country_origin"
-    t.integer "running_time"
-    t.integer "director_id", null: false
-    t.integer "genre_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "title"
-    t.index ["director_id"], name: "index_movies_on_director_id"
-    t.index ["genre_id"], name: "index_movies_on_genre_id"
+  create_table 'movies', force: :cascade do |t|
+    t.text 'story_line'
+    t.date 'release_date'
+    t.string 'country_origin'
+    t.integer 'running_time'
+    t.integer 'director_id', null: false
+    t.integer 'genre_id', null: false
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.string 'title'
+    t.index ['director_id'], name: 'index_movies_on_director_id'
+    t.index ['genre_id'], name: 'index_movies_on_genre_id'
   end
 
-  add_foreign_key "directors", "genres"
-  add_foreign_key "movies", "directors"
-  add_foreign_key "movies", "genres"
+  add_foreign_key 'directors', 'genres'
+  add_foreign_key 'movies', 'directors'
+  add_foreign_key 'movies', 'genres'
 end
