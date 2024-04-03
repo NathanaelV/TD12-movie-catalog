@@ -19,5 +19,21 @@ class MoviesController < ApplicationController
     render :new
   end
 
-  def 
+  def edit
+    @movie = Movie.find(params[:id])
+  end
+
+  def update
+    @movie = Movie.find(params[:id])
+
+    return redirect_to @movie if movie_updated?
+    
+    render :edit
+  end
+
+  private
+
+  def movie_updated?
+    @movie.update(params.required(:movie).permit(:title, :release_date, :running_time, :story_line, :country_origin, :director_id, :genre_id))
+  end
 end
