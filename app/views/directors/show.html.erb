@@ -1,0 +1,17 @@
+<h1><%= @director.name %></h1>
+
+<%= link_to 'Editar', edit_director_path %>
+
+<dl>
+    <dt><strong>Nome: </strong>
+    <dd><%= @director.name %>
+
+    <dt><strong>Data de nascimento: </strong>
+    <dd><%= @director.birthdate %>
+
+    <dt><strong>Nacionalidade: </strong>
+    <dd><%= @director.nationality %>
+
+    <dt><strong>Gênero: </strong>
+    <dd><%= @director.genre.name %>
+</dl>

@@ -1,6 +1,10 @@
 <h1>Catálogo de Filmes</h1>
 
 <ul>
+    <li><%= link_to 'Diretores', directors_path %>
+</ul>
+
+<ul>
     <% @movies.each do |movie| %>
         <li><%= link_to movie.title, movie %> - <%= movie.release_date.strftime('%Y') %>
     <% end %>
