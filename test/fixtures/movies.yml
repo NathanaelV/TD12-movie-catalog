@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titles: MyString
+  story_line: MyText
+  release_date: 2024-04-03
+  country_origin: MyString
+  running_time: 1
+  director: one
+  genre: one
+
+two:
+  titles: MyString
+  story_line: MyText
+  release_date: 2024-04-03
+  country_origin: MyString
+  running_time: 1
+  director: two
+  genre: two

@@ -1,0 +1,14 @@
+<h1>Catálogo de Filmes</h1>
+
+<dl>
+    <% @movies.each do |movie| %>
+        <dt><%= link_to movie.name, movie %></dt>
+        <dd><%= movie.release_date %>
+    <% end %>
+</dl>
+
+rails g model movie titles story_line:text release_date:date country_origin running_time:integer director:references genre:references
+
+rails g model genre name
+
+rails g model director name birthdate:date nationality genre:references
