@@ -1,0 +1,24 @@
+<h1><%= @movie.title %></h1>
+
+<dl>
+    <dt><strong>Nome: </strong>
+    <dd><%= @movie.title %>
+
+    <dt><strong>Data de lançamento: </strong>
+    <dd><%= @movie.release_date %>
+
+    <dt><strong>Tempo de duração: </strong>
+    <dd><%= @movie.running_time %>
+
+    <dt><strong>Sinopse: </strong>
+    <dd><%= @movie.story_line %>
+
+    <dt><strong>País de origen: </strong>
+    <dd><%= @movie.country_origin %>
+
+    <dt><strong>Diretor: </strong>
+    <dd><%= @movie.director.name if @movie.director %>
+    
+    <dt><strong>Gênero: </strong>
+    <dd><%= @movie.genre.name if @movie.genre %>
+</dl>
