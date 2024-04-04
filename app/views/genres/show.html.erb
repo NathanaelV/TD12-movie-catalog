@@ -7,3 +7,11 @@
     <dt><strong>Nome: </strong>
     <dd><%= @genre.name %>
 </dl>
+
+<h3>Filmes do gênero <%= @genre.name %></h3>
+
+<ul>
+    <% @movies.each do |movie| %>
+        <li><%= movie.title %>
+    <% end %>
+</ul>

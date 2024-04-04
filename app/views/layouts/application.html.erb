@@ -11,10 +11,12 @@
   </head>
 
   <body>
-    <%= link_to 'Adicionar um filme', new_movie_path %><br>
-    <%= link_to 'Adicionar um diretor', new_director_path %><br>
-    <%= link_to 'Adicionar um gênero', new_genre_path %><br>
-    <%= link_to 'Menu', root_path %>
+    <ul>
+      <li><%= link_to 'Adicionar um filme', new_movie_path %><br>
+      <li><%= link_to 'Adicionar um diretor', new_director_path %><br>
+      <li><%= link_to 'Adicionar um gênero', new_genre_path %><br>
+      <li><%= link_to 'Menu', root_path %>
+    </ul>
     <%= yield %>
   </body>
 </html>
