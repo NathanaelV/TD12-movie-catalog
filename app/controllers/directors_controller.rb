@@ -28,7 +28,7 @@ class DirectorsController < ApplicationController
 
     return redirect_to @director if director_updated?
 
-    render :update
+    render :edit
   end
 
   private

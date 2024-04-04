@@ -1,0 +1,5 @@
+<h1>Editar <%= @genre.name %></h1>
+
+<%= link_to 'Gêneros', genres_path %><br>
+
+<%= render partial: 'form', locals: { genre: @genre } %>

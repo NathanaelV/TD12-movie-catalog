@@ -1,0 +1,9 @@
+<h1><%= @genre.name %></h1>
+
+<%= link_to 'Generos', genres_path %><br>
+<%= link_to 'Editar', edit_genre_path %>
+
+<dl>
+    <dt><strong>Nome: </strong>
+    <dd><%= @genre.name %>
+</dl>
