@@ -16,3 +16,11 @@
     <dt><strong>Gênero: </strong>
     <dd><%= @director.genre.name %>
 </dl>
+
+<h3>Filmes do gênero <%= @director.name %></h3>
+
+<ul>
+    <% @movies.each do |movie| %>
+        <li><%= movie.title %>
+    <% end %>
+</ul>
