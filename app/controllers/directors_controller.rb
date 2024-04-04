@@ -6,7 +6,7 @@ class DirectorsController < ApplicationController
   def show
     @director = Director.find(params[:id])
   end
-  
+
   def new
     @director = Director.new(params[:id])
   end
