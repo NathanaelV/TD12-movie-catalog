@@ -1,0 +1,5 @@
+<h1>Editar <%= @director.name %></h1>
+
+<%= link_to 'Diretores', directors_path %><br>
+
+<%= render partial: 'form', locals: { director: @director } %>

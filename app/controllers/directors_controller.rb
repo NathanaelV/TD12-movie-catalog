@@ -22,5 +22,18 @@ class DirectorsController < ApplicationController
   def edit
     @director = Director.find(params[:id])
   end
-  
+
+  def update
+    @director = Director.find(params[:id])
+
+    return redirect_to @director if director_updated?
+
+    render :update
+  end
+
+  private
+
+  def director_updated?
+    @director.update(params.required(:director).permit(:name, :birthdate, :nationality, :genre_id))
+  end
 end
